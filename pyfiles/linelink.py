@@ -39,8 +39,8 @@ def strB2Q(ustring):
 
 def whitespace_del(S):
     """去掉字符串中的所有空格"""
-    output_s = ''
-    return output_s.join(S.split('\n'))
+    S = ''.join(S.split('-\n'))
+    return ' '.join(S.split('\n'))
 
 if __name__ == '__main__':
     while True:
