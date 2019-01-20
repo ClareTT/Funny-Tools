@@ -38,19 +38,44 @@ def strB2Q(ustring):
     return rstring
 
 def whitespace_del(S):
-    """去掉字符串中的所有空格"""
+    """去掉字符串中的所有空格和换行"""
+    S = ''.join(S.split(' '))
+    return ''.join(S.split('\n'))
+
+def linebreak_del(S):
+    """
+    1. 将'-\n'去掉
+    2. 将换行符替换为空格
+    """
     S = ''.join(S.split('-\n'))
     return ' '.join(S.split('\n'))
 
+def text_processing(S, userInput):
+    if userInput == 2:
+        S_wd = linebreak_del(S)
+    else:
+        S_wd = whitespace_del(S)
+    return S_wd
+        
+
+
 if __name__ == '__main__':
+    
+    userInput = input('''Press the main language of your passage
+(1 for zh-hans(defult) and 2 for English):\n
+Warning: it is not suitable for cmd, both Anoconda and IDLE is OK to run this.''')
+    
+    userInput = int(userInput)
+    
     while True:
         S = input('Enter the Passage: ')
+        S = strQ2B(S)
         if S == '.':
             break
-        S_wd = whitespace_del(S)
-        output = strQ2B(S_wd)
         
-        pyperclip.copy(output)
+        S_wd = text_processing(S, userInput)
         
-    print('Thanks for using!')     
+        pyperclip.copy(S_wd)
+        
+    print('Thanks for using!')   
    
