@@ -63,7 +63,7 @@ if __name__ == '__main__':
     
     userInput = input('''Press the main language of your passage
 (1 for zh-hans(defult) and 2 for English):\n
-Warning: it is not suitable for cmd, both Anoconda and IDLE is OK to run this.''')
+Warning: it is not suitable for either cmd or IDLE, environment Anoconda is OK to run this.''')
     
     userInput = int(userInput)
     
