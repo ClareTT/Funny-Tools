@@ -6,5 +6,5 @@ Today I just fix the line link tool linelink.py again. The result is that the us
 Becides, to reserve the space for more tools, the structure has been refactored.    
 (2019.1.20 updated)
 
-Wanna to get rid of entanglement of investment? [Click](./pyfiles/InvestmentAdvice)! 
+Wanna to get rid of entanglement of investment? [Click](./pyfiles/InvestmentAdvice)!     
 (2019.2.12 updated)
